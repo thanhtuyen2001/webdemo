@@ -12,6 +12,8 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import Profile from './pages/Profile';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,7 +21,9 @@ root.render(
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />}>
-        <Route path='home' element={<Home/>}></Route>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='signin' element={<SignIn/>}></Route>
+        <Route path='signup' element={<SignUp/>}></Route>
 
         <Route path='setting' element={<Contact/>}></Route>
         <Route path='profile/:username' element={<Profile/>}></Route>
